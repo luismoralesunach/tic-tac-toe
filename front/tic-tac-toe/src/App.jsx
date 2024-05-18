@@ -63,18 +63,25 @@ function App() {
 
 
   return (
-    <>
+    
+    <div className='first-div'>
+      
+
     {winner && (
-        <h1>
+      <h1>
           {winner === 'draw' ? 'It\'s a draw!' : `Player ${winner} wins!`}
         </h1>
       )}
+
+    <div className='main-div'>
+
+    
     
     <div className='grid'>
 
  
       {playerInfo.map((player)=>(
-      <button  
+        <button  
         key={player.player}
         onClick={()=>playerTurn(player)}
         disabled = {player.clicked || winner}
@@ -84,7 +91,9 @@ function App() {
           ))}
       </div>
       
-    </>
+    
+          </div>
+        </div>
   )
 }
 
